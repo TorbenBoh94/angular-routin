@@ -1,0 +1,30 @@
+<div class="container">
+    <h2 align=center>Institutsmitglieder</h2>
+      <my-panel-content> 
+      <ul>
+        <li *ngFor="let professor of professoren;let i=index" class="list-group-item-action list-group-item"  >
+          <img src={{professor.img}} height=120 align=right>
+          <p>{{professor.name}}, {{professor.vorname}}</p>
+          <p>{{professor.bereich}}</p>
+          <p>{{professor.mail}}</p>
+          <p>{{professor.rang}}</p>
+      </ul>
+      </my-panel-content>
+
+ 
+
+</div>
+
+<div class="container">
+  <table>
+    <tr>
+      
+    </tr>
+
+  </table>
+
+</div>
+
+
+
+
