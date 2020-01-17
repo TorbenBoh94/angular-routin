@@ -21,6 +21,7 @@ import {DatenschutzComponent} from './pages/datenschutz/datenschutz.component';
 import {RechteComponent} from './pages/rechte/rechte.component';
 import {NotFoundComponent} from './pages/notfound/notfound.component';
 import { LoginService } from './pages/login/login.service';
+import { ProfessorenService } from './pages/professoren/professoren.service';
 
 
 
@@ -63,6 +64,6 @@ import { LoginService } from './pages/login/login.service';
                   NotFoundComponent,
                    ],
   bootstrap:    [ AppComponent ],
-  providers: [LoginService]
+  providers: [LoginService, ProfessorenService]
 })
 export class AppModule { }

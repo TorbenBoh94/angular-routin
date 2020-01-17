@@ -6,12 +6,39 @@
           <img src={{professor.img}} height=120 align=right>
           <p>{{professor.name}}, {{professor.vorname}}</p>
           <p>{{professor.bereich}}</p>
-          <p>{{professor.mail}}</p>
+          <p>{{professor.vorname}}.{{professor.name}}@hs-flensburg.de</p>
           <p>{{professor.rang}}</p>
+          <button *ngIf="login" class="btn btn-primary btn-sm">Editieren</button> 
+          <button *ngIf="login" class="btn btn-primary btn-sm" (click)="professorenService.onDelete(i)">Löschen</button>
       </ul>
       </my-panel-content>
 
- {{login}}
+ 
+ <ul *ngIf="login">
+  <li class="list-group-item-action list-group-item">
+    <h3>Neues Mitglied Hinzufügen</h3>   
+  </li>
+   <li class="list-group-item-action list-group-item">
+      <input type="text" [(ngModel)]="professorenService.post.name" placeholder=Name required minlength="4">
+    </li>
+    <li class="list-group-item-action list-group-item">
+      <input type="text" [(ngModel)]="professorenService.post.vorname" placeholder=Vorname >
+    </li>
+    <li class="list-group-item-action list-group-item">
+      <input type="text" [(ngModel)]="professorenService.post.img" placeholder="Link zum Bild" >
+    </li>
+    <li class="list-group-item-action list-group-item">
+      <input type="text" [(ngModel)]="professorenService.post.bereich" placeholder=Bereich >
+    </li>
+    <li class="list-group-item-action list-group-item">
+      <input type="text" [(ngModel)]="professorenService.post.rang" placeholder=Mail >
+    </li>
+  <li class="list-group-item-action list-group-item">
+    <button (click)="onAddworker()" class="btn btn-primary btn-sm">Mitglied hinzufügen</button>
+  </li>
+
+   
+ </ul>
 
 </div>
 
