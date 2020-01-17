@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
 
 import { LandingComponent } from './pages/landing/landing.component';
 import { NavigationComponent } from './elements/navigation.component';
@@ -45,8 +44,7 @@ import {NotFoundComponent} from './pages/notfound/notfound.component';
                     {path:'**',component:NotFoundComponent}
                   ],{useHash:true}) ],
   declarations: [ AppComponent,
-                  HelloComponent,
-                  
+                                    
                   LandingComponent,
                   NavigationComponent,
                   LoginComponent,

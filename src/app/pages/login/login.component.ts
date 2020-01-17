@@ -9,11 +9,5 @@ import{Component} from '@angular/core';
 
 export class LoginComponent{
   
-  loginUser(event){
-    event.preventDefault()
-    const target=event.target
-    const username=target.querySelector('#username').value
-    const password=target.querySelector('#password').value
-    console.log(username,password)
-  }
+
 }
