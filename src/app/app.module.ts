@@ -20,6 +20,7 @@ import {ForschungComponent} from './pages/forschung/forschung.component';
 import {DatenschutzComponent} from './pages/datenschutz/datenschutz.component';
 import {RechteComponent} from './pages/rechte/rechte.component';
 import {NotFoundComponent} from './pages/notfound/notfound.component';
+import { LoginService } from './pages/login/login.service';
 
 
 
@@ -59,7 +60,9 @@ import {NotFoundComponent} from './pages/notfound/notfound.component';
                   ForschungComponent,
                   DatenschutzComponent,
                   RechteComponent,
-                  NotFoundComponent ],
-  bootstrap:    [ AppComponent ]
+                  NotFoundComponent,
+                   ],
+  bootstrap:    [ AppComponent ],
+  providers: [LoginService]
 })
 export class AppModule { }

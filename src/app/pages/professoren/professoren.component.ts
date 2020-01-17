@@ -1,5 +1,6 @@
 import{Component} from '@angular/core';
 import {Prof} from './prof'
+import{LoginService }from '../login/login.service'
 
 @Component({
   selector:'my-professor',
@@ -16,6 +17,8 @@ export class ProfessorComponent{
     new Prof("https://hs-flensburg.de/sites/default/files/styles/portraitfoto/public/2017-11/petersen_kai.jpg.jpeg?itok=JVf1P7aR","Kai","Petersen","Professor am Fachbereich Wirtschaft","Senat:Professor","kai.petersen@hs-flensburg.de"),
     
   ]
+  login:boolean
+  constructor(private loginService:LoginService){this.login=this.loginService.output()}
 
 
   

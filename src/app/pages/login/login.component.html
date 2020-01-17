@@ -1,11 +1,5 @@
-<h2 align=center> Login</h2>
-<br>
-<form (submit)="loginUser($event)" align=center>
-  <input type="text" placeholder="Benutzername" id="username">
-  <br>
-  <br>
-  <input type="password" placeholder="Passwort" id="password">
-  <br>
-  <br>
-  <input type="submit" value="Submit">
-</form>
+<div align=center>
+<button *ngIf="!login" (click)="onLogin()" class="btn btn-primary btn-lg" >Login</button>
+<button *ngIf="login" (click)="onLogin()" class="btn btn-primary btn-lg" >Logout</button>
+
+</div>
