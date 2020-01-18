@@ -1,2 +1,70 @@
-Forschung
-{{login}}
+
+
+<div class="container">
+    <h2 align=center>Publikationen</h2>
+      <ul>
+        <li *ngFor="let publikation of publikationen;let i=index" class="list-group-item-action list-group-item"  >
+          <table>
+          <tr>
+          <th><b>Forschungsprojekt:</b></th>
+          <th> {{publikation.forschungsprojekt}}</th>
+          </tr>
+          <tr>
+          <td><b>Autor:</b></td><td> {{publikation.autor}}</td>
+          </tr>
+          <tr>
+          <td><b>Ausgabe:</b></td><td> {{publikation.publikationsTyp}}</td>
+          </tr>
+          <tr>
+          <td><b>Veröffentlichung:</b></td><td> {{publikation.jahr}}</td>
+          </tr>
+          <tr>
+          <td><b>volumen:</b> </td> <td>{{publikation.volumen}}</td>
+          </tr>
+          <tr>
+          <td><b>publisher:</b></td><td> {{publikation.publisher}}</td>
+          </tr>
+          <tr>
+          <td><b>school:</b></td><td> {{publikation.school}}</td>
+          </tr>
+          <tr>
+          <button *ngIf="login" class="btn btn-primary btn-sm">Editieren</button> 
+          <button *ngIf="login" class="btn btn-primary btn-sm" (click)="forschungService.onDelete(i)">Löschen</button>
+          </tr>
+          </table>
+      </ul>
+
+
+ <ul *ngIf="login">
+  <li class="list-group-item-action list-group-item">
+    <h3>Neue Publikation hinzufügen</h3>   
+  </li>
+   <li class="list-group-item-action list-group-item">
+      <input type="text" [(ngModel)]="forschungService.post.forschungsprojekt" placeholder=Forschungsprojekt required minlength="4">
+    </li>
+    <li class="list-group-item-action list-group-item">
+      <input type="text" [(ngModel)]="forschungService.post.autor" placeholder=Autor >
+    </li>
+    <li class="list-group-item-action list-group-item">
+      <input type="text" [(ngModel)]="forschungService.post.publikationsTyp" placeholder="Publikationstyp" >
+    </li>
+    <li class="list-group-item-action list-group-item">
+      <input type="month" [(ngModel)]="forschungService.post.jahr"  maxlength=4 placeholder=Veröffentlichung >
+    </li>
+    <li class="list-group-item-action list-group-item">
+      <input type="text" [(ngModel)]="forschungService.post.volumen" placeholder=Umfang >
+    </li>
+    <li class="list-group-item-action list-group-item">
+      <input type="text" [(ngModel)]="forschungService.post.publisher" placeholder=Publisher >
+    </li>
+    <li class="list-group-item-action list-group-item">
+      <input type="text" [(ngModel)]="forschungService.post.school" placeholder=Lehranstalt >
+    </li>
+    <li class="list-group-item-action list-group-item">
+      <input type="file" accept="application/pdf">
+    </li>
+  <li class="list-group-item-action list-group-item">
+    <button (click)="onAddPublication()" class="btn btn-primary btn-sm">Mitglied hinzufügen</button>
+  </li>
+ </ul>
+</div>

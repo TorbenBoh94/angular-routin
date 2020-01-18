@@ -10,7 +10,7 @@ import{LoginService} from './login.service'
 export class LoginComponent{
   @HostBinding('class.login')
   login=false;
-  constructor(private loginService:LoginService){}
+  constructor(private loginService:LoginService){this.login=this.loginService.output()}
 
   onLogin(){
     this.loginService.toggle();

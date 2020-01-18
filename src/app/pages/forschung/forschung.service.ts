@@ -5,7 +5,10 @@ import {Forschung} from './forschung';
 export class ForschungService {
 
   constructor() { }
-  publication=[
+  publicationen=[
+    new Forschung("Deutschland am Rander einer Rezession: Gemeinschaftsdiagnose Herbst 2008","ifo Institut München, Ifw Kiel, IWH, RWI Essen","Magazin",2008,"volumen","publisher","school"),
+    
+
 
   ]
     post={
@@ -15,20 +18,19 @@ export class ForschungService {
     jahr: "",
     volumen:"",
     publisher:"",
-    seiten:"",
     school:""
   }
-  
+
      onAddPublication(){
-     this.publication.push(
-       new Forschung(this.post.forschungsprojekt,this.post.autor,this.post.publikationsTyp,this.post.jahr,this.post.volumen,this.post.publisher,this.post.seiten,this.post.school)
+     this.publicationen.push(
+       new Forschung(this.post.forschungsprojekt,this.post.autor,this.post.publikationsTyp,this.post.jahr,this.post.volumen,this.post.publisher,this.post.school)
      )
    };
    onDelete(index:number){
-     this.publication.splice(index,1)
+     this.publicationen.splice(index,1)
    }
    output(){
-     return this.publication;
+     return this.publicationen;
    }
 
 }
