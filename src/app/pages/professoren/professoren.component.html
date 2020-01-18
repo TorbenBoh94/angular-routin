@@ -1,6 +1,6 @@
 <div class="container">
     <h2 align=center>Institutsmitglieder</h2>
-      <my-panel-content> 
+      
       <ul>
         <li *ngFor="let professor of professoren;let i=index" class="list-group-item-action list-group-item"  >
           <img src={{professor.img}} height=120 align=right>
@@ -11,7 +11,7 @@
           <button *ngIf="login" class="btn btn-primary btn-sm">Editieren</button> 
           <button *ngIf="login" class="btn btn-primary btn-sm" (click)="professorenService.onDelete(i)">Löschen</button>
       </ul>
-      </my-panel-content>
+    
 
  
  <ul *ngIf="login">

@@ -13,3 +13,5 @@ export class ProjekteComponent{
     constructor(private loginService:LoginService){this.login=this.loginService.output()}
 
 }
+
+//Die Namen der Institutsmitglieder über den Service abrufen und als Dropdown implementieren

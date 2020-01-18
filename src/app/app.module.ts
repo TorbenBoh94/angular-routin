@@ -14,7 +14,6 @@ import { FooterComponent } from './elements/footer/footer.component';
 import {PanelComponent} from './elements/panel/panel.component';
 import {PanelContentComponent} from './elements/panel/panel-content.component';
 import {ImpressumComponent} from './pages/impressum/impressum.component';
-import {PublikationenComponent} from './pages/publikationen/publikationen.component';
 import {ProjekteComponent} from './pages/projekte/projekte.component';
 import {ForschungComponent} from './pages/forschung/forschung.component';
 import {DatenschutzComponent} from './pages/datenschutz/datenschutz.component';
@@ -22,6 +21,7 @@ import {RechteComponent} from './pages/rechte/rechte.component';
 import {NotFoundComponent} from './pages/notfound/notfound.component';
 import { LoginService } from './pages/login/login.service';
 import { ProfessorenService } from './pages/professoren/professoren.service';
+import { ForschungService } from './pages/forschung/forschung.service';
 
 
 
@@ -34,9 +34,7 @@ import { ProfessorenService } from './pages/professoren/professoren.service';
                     {path:'admin', component:AdminComponent},
                     {path:'prof',component:ProfessorComponent},
                     {path:'impressum',component:ImpressumComponent},
-                    {path:'publikationen',component:PublikationenComponent},
                     {path:'projekte',component:ProjekteComponent},
-                    {path:'publikationen',component:PublikationenComponent},
                     {path:'forschung',component:ForschungComponent},
                     {path:'datenschutz',component:DatenschutzComponent},
                     {path:'rechte',component:RechteComponent},
@@ -56,7 +54,7 @@ import { ProfessorenService } from './pages/professoren/professoren.service';
                   PanelComponent,
                   PanelContentComponent,
                   ImpressumComponent,
-                  PublikationenComponent,
+                  
                   ProjekteComponent,
                   ForschungComponent,
                   DatenschutzComponent,
@@ -64,6 +62,6 @@ import { ProfessorenService } from './pages/professoren/professoren.service';
                   NotFoundComponent,
                    ],
   bootstrap:    [ AppComponent ],
-  providers: [LoginService, ProfessorenService]
+  providers: [LoginService, ProfessorenService, ForschungService]
 })
 export class AppModule { }
