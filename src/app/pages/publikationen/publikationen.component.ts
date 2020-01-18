@@ -1,4 +1,5 @@
 import{Component} from '@angular/core';
+import{LoginService }from '../login/login.service';
 
 @Component({
   selector:'my-publikationen',
@@ -8,5 +9,7 @@ import{Component} from '@angular/core';
 })
 
 export class PublikationenComponent{
-  
+    login:boolean;
+    constructor(private loginService:LoginService){this.login=this.loginService.output()}
+
 }
