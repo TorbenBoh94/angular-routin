@@ -4,10 +4,10 @@
     <h2 align=center>Publikationen</h2>
       <ul>
         <li *ngFor="let publikation of publikationen;let i=index" class="list-group-item-action list-group-item"  >
-          <table>
+          <table >
           <tr>
-          <th><b>Forschungsprojekt:</b></th>
-          <th> {{publikation.forschungsprojekt}}</th>
+ 
+          <th colspan=2> {{publikation.forschungsprojekt}}</th>
           </tr>
           <tr>
           <td><b>Autor:</b></td><td> {{publikation.autor}}</td>
@@ -28,7 +28,7 @@
           <td><b>school:</b></td><td> {{publikation.school}}</td>
           </tr>
           <tr>
-          <button *ngIf="login" class="btn btn-primary btn-sm">Editieren</button> 
+          <button *ngIf="login" class="btn btn-primary btn-sm" (click)="forschungService.onEdit(i)">Editieren</button> 
           <button *ngIf="login" class="btn btn-primary btn-sm" (click)="forschungService.onDelete(i)">Löschen</button>
           </tr>
           </table>
@@ -68,3 +68,6 @@
   </li>
  </ul>
 </div>
+
+
+{{publikationen[1].autor}}

@@ -7,7 +7,7 @@ export class ForschungService {
   constructor() { }
   publicationen=[
     new Forschung("Deutschland am Rander einer Rezession: Gemeinschaftsdiagnose Herbst 2008","ifo Institut München, Ifw Kiel, IWH, RWI Essen","Magazin",2008,"volumen","publisher","school"),
-    
+    new Forschung("Deutschland am Rander einer Rezession: Gemeinschaftsdiagnose Herbst 2008","ifo Institut München, Ifw Kiel, IWH, RWI Essen","Magazin",2008,"volumen","publisher","school"),
 
 
   ]
@@ -26,11 +26,14 @@ export class ForschungService {
        new Forschung(this.post.forschungsprojekt,this.post.autor,this.post.publikationsTyp,this.post.jahr,this.post.volumen,this.post.publisher,this.post.school)
      )
    };
-   onDelete(index:number){
+  onDelete(index:number){
      this.publicationen.splice(index,1)
    }
    output(){
      return this.publicationen;
+   }
+  onEdit(index:number){
+     this.publicationen[index].autor;
    }
 
 }
