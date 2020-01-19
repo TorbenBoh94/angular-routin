@@ -15,16 +15,16 @@
           <tr>
           <td><b>Ausgabe:</b></td><td> {{publikation.publikationsTyp}}</td>
           </tr>
-          <tr>
+          <tr *ngIf="publikation.publikationsTyp=='Magazin'||publikation.publikationsTyp=='Masterthesis'||publikation.publikationsTyp=='Buch'">
           <td><b>Veröffentlichung:</b></td><td> {{publikation.jahr}}</td>
           </tr>
-          <tr>
+          <tr *ngIf="publikation.publikationsTyp=='Buch'">
           <td><b>volumen:</b> </td> <td>{{publikation.volumen}}</td>
           </tr>
           <tr>
           <td><b>publisher:</b></td><td> {{publikation.publisher}}</td>
           </tr>
-          <tr>
+          <tr *ngIf="publikation.publikationsTyp=='Magazin'||forschungService.post.publikationsTyp=='Masterthesis'">
           <td><b>school:</b></td><td> {{publikation.school}}</td>
           </tr>
           <tr>
@@ -35,7 +35,7 @@
       </ul>
 
 <!-- Input neuer Publikationen -->
- <ul *ngIf="!login">
+ <ul *ngIf="login">
   <li class="list-group-item-action list-group-item">
     <h3>Neue Publikation hinzufügen</h3>   
   </li>

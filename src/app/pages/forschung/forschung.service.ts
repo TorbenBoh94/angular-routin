@@ -25,6 +25,15 @@ export class ForschungService {
      this.publicationen.push(
        new Forschung(this.post.forschungsprojekt,this.post.autor,this.post.publikationsTyp,this.post.jahr,this.post.volumen,this.post.publisher,this.post.school)
      )
+         this.post={
+    forschungsprojekt:"",
+    autor:"",
+    publikationsTyp: "Publikations Typ", 
+    jahr: "",
+    volumen:"",
+    publisher:"",
+    school:""
+  }
    };
   onDelete(index:number){
      this.publicationen.splice(index,1)
