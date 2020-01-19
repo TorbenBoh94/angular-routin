@@ -20,7 +20,7 @@ export class ForschungService {
     publisher:"",
     school:""
   }
-
+edit=false;
      onAddPublication(){
      this.publicationen.push(
        new Forschung(this.post.forschungsprojekt,this.post.autor,this.post.publikationsTyp,this.post.jahr,this.post.volumen,this.post.publisher,this.post.school)
@@ -42,7 +42,16 @@ export class ForschungService {
      return this.publicationen;
    }
   onEdit(index:number){
-     this.publicationen[index].autor;
+    this.edit=true;
+     this.post.forschungsprojekt=this.publicationen[index].forschungsprojekt;
+     this.post.autor=this.publicationen[index].autor;
+     this.post.publikationsTyp=this.publicationen[index].publikationsTyp;
+     this.post.jahr=this.publicationen[index].jahr;
+     this.post.volumen=this.publicationen[index].volumen;
+     this.post.publisher=this.publicationen[index].publisher;
+     this.post.school=this.publicationen[index].school;
+
+
    }
 
 }
