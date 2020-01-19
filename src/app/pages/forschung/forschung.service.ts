@@ -14,7 +14,7 @@ export class ForschungService {
     post={
     forschungsprojekt:"",
     autor:"",
-    publikationsTyp: "", 
+    publikationsTyp: "Publikations Typ", 
     jahr: "",
     volumen:"",
     publisher:"",
