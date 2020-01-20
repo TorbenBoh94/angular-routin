@@ -17,6 +17,10 @@
           <td>Beteiligte:</td>
           <td>{{projekt.beteiligte}}</td>
         </tr>
+                <tr>
+          <td>Bereich:</td>
+          <td>{{projekt.bereich}}</td>
+        </tr>
        </table>
           <button *ngIf="login" class="btn btn-primary btn-sm" (click)="projekteService.onEdit(i)">Editieren</button> 
           <button *ngIf="login" class="btn btn-primary btn-sm" (click)="projekteService.onDelete(i)">Löschen</button>

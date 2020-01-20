@@ -7,13 +7,14 @@ export class ProjekteService {
 index:number;
 edit:boolean;
   projekte=[
-    new Projekt("Software","Dies ist eine Beschreibung","Kai Petersen")
+    new Projekt("Software","Dies ist eine Beschreibung","Kai Petersen","Wirtschaftsinformatik")
    
   ]
   post={
     name:"",
     beschreibung:"",
     beteiligte: "", 
+    bereich:""
 
  
   }
@@ -21,12 +22,13 @@ edit:boolean;
   constructor() { }
    onAddworker(){
      this.projekte.push(
-       new Projekt()
+       new Projekt(this.post.name,this.post.beschreibung,this.post.beteiligte)
      )
   this.post={
     name:"",
     beschreibung:"",
     beteiligte: "", 
+    bereich:""
 
  
   }
