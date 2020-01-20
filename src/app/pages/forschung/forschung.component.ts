@@ -30,8 +30,9 @@ export class ForschungComponent{
    };
     onClickOption(clickOption:string){
       this.forschungService.post.publikationsTyp=clickOption;
-      this.dropDownOpened=false;
-      
-      
+      this.dropDownOpened=false;      
+    }
+    onEditPublication(){
+      this.forschungService.onEditPublication();
     }
 }

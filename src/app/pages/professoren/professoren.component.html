@@ -3,12 +3,26 @@
       
       <ul>
         <li *ngFor="let professor of professoren;let i=index" class="list-group-item-action list-group-item"  >
-          <img src={{professor.img}} height=120 align=right>
-          <p>{{professor.name}}, {{professor.vorname}}</p>
-          <p>{{professor.bereich}}</p>
-          <p>{{professor.vorname}}.{{professor.name}}@hs-flensburg.de</p>
-          <p>{{professor.rang}}</p>
-          <button *ngIf="login" class="btn btn-primary btn-sm">Editieren</button> 
+          <table width=100%>
+        <tr>
+          <td>Name:</td>
+          <th>{{professor.name}}, {{professor.vorname}}</th>
+          <td rowspan=5><img src={{professor.img}} height=120 align=right></td>
+        </tr>
+        <tr>
+          <td>Bereich:</td>
+          <td>{{professor.bereich}}</td>
+        </tr>
+        <tr>
+          <td>E-Mail:</td>
+          <td>{{professor.vorname}}.{{professor.name}}@hs-flensburg.de</td>
+        </tr>
+        <tr>
+          <td>Raum:</td>
+          <td>{{professor.raum}}</td>
+        </tr>
+      </table>
+          <button *ngIf="login" class="btn btn-primary btn-sm" (click)="professorenService.onEdit(i)">Editieren</button> 
           <button *ngIf="login" class="btn btn-primary btn-sm" (click)="professorenService.onDelete(i)">Löschen</button>
       </ul>
     
@@ -31,10 +45,11 @@
       <input type="text" [(ngModel)]="professorenService.post.bereich" placeholder=Bereich >
     </li>
     <li class="list-group-item-action list-group-item">
-      <input type="text" [(ngModel)]="professorenService.post.rang" placeholder=Rang >
+      <input type="text" [(ngModel)]="professorenService.post.raum" placeholder=Raum >
     </li>
   <li class="list-group-item-action list-group-item">
-    <button (click)="onAddworker()" class="btn btn-primary btn-sm">Mitglied hinzufügen</button>
+    <button *ngIf="!professorenService.edit" (click)="onAddworker()" class="btn btn-primary btn-sm">Mitglied hinzufügen</button>
+    <button *ngIf="professorenService.edit" (click)="onEditworker()" class="btn btn-primary btn-sm">Mitglied bearbeiten</button>
   </li>
  </ul>
 </div>

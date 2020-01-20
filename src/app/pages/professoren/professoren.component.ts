@@ -26,6 +26,9 @@ export class ProfessorComponent{
    onAddworker(){
     this.professorenService.onAddworker();
    };
+   onEditworker(){
+     this.professorenService.onEditworker();
+   }
 
   
 

@@ -3,11 +3,11 @@ import {Forschung} from './forschung';
 
 @Injectable()
 export class ForschungService {
-
+index:number;
   constructor() { }
   publicationen=[
-    new Forschung("Deutschland am Rander einer Rezession: Gemeinschaftsdiagnose Herbst 2008","ifo Institut München, Ifw Kiel, IWH, RWI Essen","Magazin",2008,"volumen","publisher","school"),
-    new Forschung("Deutschland am Rander einer Rezession: Gemeinschaftsdiagnose Herbst 2008","ifo Institut München, Ifw Kiel, IWH, RWI Essen","Magazin",2008,"volumen","publisher","school"),
+    new Forschung("Deutschland am Rander einer Rezession: Gemeinschaftsdiagnose Herbst 2008","ifo Institut München, Ifw Kiel, IWH, RWI Essen","Magazin","2008-02","volumen","publisher","school"),
+    new Forschung("Deutschland am Rander einer Rezession: Gemeinschaftsdiagnose Herbst 2008","ifo Institut München, Ifw Kiel, IWH, RWI Essen","Magazin", "2008-02","volumen","publisher","school"),
 
 
   ]
@@ -25,7 +25,7 @@ edit=false;
      this.publicationen.push(
        new Forschung(this.post.forschungsprojekt,this.post.autor,this.post.publikationsTyp,this.post.jahr,this.post.volumen,this.post.publisher,this.post.school)
      )
-         this.post={
+    this.post={
     forschungsprojekt:"",
     autor:"",
     publikationsTyp: "Publikations Typ", 
@@ -50,8 +50,27 @@ edit=false;
      this.post.volumen=this.publicationen[index].volumen;
      this.post.publisher=this.publicationen[index].publisher;
      this.post.school=this.publicationen[index].school;
-
-
+    this.index=index;
    }
-
+  onEditPublication(){
+    this.publicationen[this.index].forschungsprojekt=this.post.forschungsprojekt;
+    this.publicationen[this.index].autor=this.post.autor;
+    this.publicationen[this.index].publikationsTyp=this.post.publikationsTyp;
+    this.publicationen[this.index].jahr=this.post.jahr;
+    this.publicationen[this.index].volumen=this.post.volumen;
+    this.publicationen[this.index].publisher=this.post.publisher;
+    this.publicationen[this.index].school=this.post.school ;
+    this.publicationen[this.index].forschungsprojekt=this.post.forschungsprojekt;
+    this.edit=false;
+    
+    this.post={
+    forschungsprojekt:"",
+    autor:"",
+    publikationsTyp: "Publikations Typ", 
+    jahr: "",
+    volumen:"",
+    publisher:"",
+    school:""
+    }
+  }
 }

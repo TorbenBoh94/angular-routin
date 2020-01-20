@@ -83,8 +83,11 @@
       <input type="file" accept="application/pdf">
     </li>
 
-  <li class="list-group-item-action list-group-item">
-    <button (click)="onAddPublication()" class="btn btn-primary btn-sm">Publikation hinzufügen</button>
+  <li *ngIf="!forschungService.edit" class="list-group-item-action list-group-item">
+    <button  (click)="onAddPublication()" class="btn btn-primary btn-sm">Publikation hinzufügen</button>
+  </li>
+  <li *ngIf="forschungService.edit" class="list-group-item-action list-group-item">
+    <button  (click)="onEditPublication()" class="btn btn-primary btn-sm">Publikation bearbeiten</button>
   </li>
  </ul>
 </div>

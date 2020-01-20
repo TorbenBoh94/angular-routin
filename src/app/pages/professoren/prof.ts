@@ -5,7 +5,7 @@ export class Prof {
         public vorname:string,
         public name: string, 
         public bereich: string,
-        public rang:string,
-        public mail:string
+        public raum:string
+        
     ) {}
 }
