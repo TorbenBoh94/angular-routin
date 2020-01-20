@@ -4,12 +4,27 @@
     Die Hochschule Flensburg befindet sich mit der zweiten Flensburger Hochschule, der Europa-Universität Flensburg etwas südlich des Flensburger Stadtzentrums im Stadtteil Sandberg auf dem Campusgelände. Die Fachhochschule ist eine von neun öffentlichen Hochschulen in Schleswig-Holstein. Die Anzahl der Studierenden hat sich in den vergangen zehn Jahren nahezu verdoppelt- von zirka 2000 auf mehr als 4100.
   </p>
   <ul>
-    <li class="list-group-item-action list-group-item"  >
-      <img src={{praesident.img}} height=120 align=right>
-      <p>{{praesident.name}}, {{praesident.vorname}}</p>
-      <p>{{praesident.bereich}}</p>
-      <p>{{praesident.mail}}</p>
-      <p>{{praesident.rang}}</p>
+    <li class="list-group-item-action list-group-item">
+                  <table width=100%>
+        <tr>
+          <td>Name:</td>
+          <th>{{professor[0].name}}, {{professor[0].vorname}}</th>
+          <td rowspan=5><img src={{professor[0].img}} height=120 align=right></td>
+        </tr>
+        <tr>
+          <td>Bereich:</td>
+          <td>{{professor[0].bereich}}</td>
+        </tr>
+        <tr>
+          <td>E-Mail:</td>
+          <td>{{professor[0].vorname}}.{{professor[0].name}}@hs-flensburg.de</td>
+        </tr>
+        <tr>
+          <td>Raum:</td>
+          <td>{{professor[0].raum}}</td>
+        </tr>
+      </table>
+    </li>
   </ul>
 
 
