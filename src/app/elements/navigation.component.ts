@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: [ '../app.component.css' ]
 })
 export class NavigationComponent  {
+       collapsed = true;
+     toggleCollapsed(): void {
+       this.collapsed = !this.collapsed;
+     }
 }

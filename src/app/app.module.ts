@@ -24,6 +24,7 @@ import { ProfessorenService } from './pages/professoren/professoren.service';
 import { ForschungService } from './pages/forschung/forschung.service';
 import { EventsComponent } from './pages/events/events.component';
 import { NeuigkeitenComponent } from './pages/neuigkeiten/neuigkeiten.component';
+import { ProjekteService } from './pages/projekte/projekte.service';
 
 
 
@@ -66,6 +67,6 @@ import { NeuigkeitenComponent } from './pages/neuigkeiten/neuigkeiten.component'
                   NeuigkeitenComponent,
                    ],
   bootstrap:    [ AppComponent ],
-  providers: [LoginService, ProfessorenService, ForschungService]
+  providers: [LoginService, ProfessorenService, ForschungService, ProjekteService]
 })
 export class AppModule { }

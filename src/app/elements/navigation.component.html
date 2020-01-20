@@ -3,10 +3,10 @@
     <img src="https://scontent-dus1-1.xx.fbcdn.net/v/t1.0-9/13102903_1087821821279051_670729839811780745_n.jpg?_nc_cat=103&_nc_ohc=q70GXSqWGecAX_0Fw_n&_nc_ht=scontent-dus1-1.xx&oh=63d732ad79ec60ab5a6dd892ae13ffb4&oe=5E9C8082" width="30" height="30" class="d-inline-block allign-top" alt="">
     Hochschule Flensburg
   </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" (click)="toggleCollapsed()"  >
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
+  <div id="navbarSupportedContent" [ngClass]="{'collapse': collapsed, 'navbar-collapse': true}">
     <ul class="navbar-nav">
       <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
         <a class="nav-link" routerLink="/">Home </a>

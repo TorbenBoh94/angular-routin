@@ -1,3 +1,46 @@
-Projekte
-{{login}}
+<div class="container">
+    <h2 align=center>Projekte</h2>
+      
+      <ul>
+        <li *ngFor="let projekt of projekte;let i=index" class="list-group-item-action list-group-item"  >
+          <table width=100%>
+        <tr>
+          <td>Name:</td>
+          <th>{{projekt.name}}</th>
+       
+        </tr>
+        <tr>
+          <td>Beschreibung:</td>
+          <td>{{projekt.beschreibung}}</td>
+        </tr>
+        <tr>
+          <td>Beteiligte:</td>
+          <td>{{projekt.beteiligte}}</td>
+        </tr>
+       </table>
+          <button *ngIf="login" class="btn btn-primary btn-sm" (click)="projekteService.onEdit(i)">Editieren</button> 
+          <button *ngIf="login" class="btn btn-primary btn-sm" (click)="projekteService.onDelete(i)">Löschen</button>
+      </ul>
+    
 
+ 
+ <ul *ngIf="login">
+  <li class="list-group-item-action list-group-item">
+    <h3>Neues Mitglied Hinzufügen</h3>   
+  </li>
+   <li class="list-group-item-action list-group-item">
+      <input type="text" [(ngModel)]="projekteService.post.name" placeholder="Name">
+    </li>
+    <li class="list-group-item-action list-group-item">
+      <input type="text" [(ngModel)]="projekteService.post.beschreibung" placeholder="Beschreibung" >
+    </li>
+    <li class="list-group-item-action list-group-item">
+      <input type="text" [(ngModel)]="projekteService.post.beteiligte" placeholder="Beteiligte Institutsmitglieder" >
+    </li>
+
+  <li class="list-group-item-action list-group-item">
+    <button *ngIf="!projekteService.edit" (click)="onAddProject()" class="btn btn-primary btn-sm">Projekt hinzufügen</button>
+    <button *ngIf="projekteService.edit" (click)="onEditProject()" class="btn btn-primary btn-sm">Projekt bearbeiten</button>
+  </li>
+ </ul>
+</div>
