@@ -27,7 +27,7 @@
       </ul>
     
 
- 
+
  <ul *ngIf="login">
   <li class="list-group-item-action list-group-item">
     <h3>Neues Mitglied Hinzufügen</h3>   
@@ -48,10 +48,11 @@
       <input type="text" [(ngModel)]="professorenService.post.raum" placeholder=Raum >
     </li>
   <li class="list-group-item-action list-group-item">
-    <button *ngIf="!professorenService.edit" (click)="onAddworker()" class="btn btn-primary btn-sm">Mitglied hinzufügen</button>
+    <button type=submit *ngIf="!professorenService.edit" (click)="onAddworker()" class="btn btn-primary btn-sm">Mitglied hinzufügen</button>
     <button *ngIf="professorenService.edit" (click)="onEditworker()" class="btn btn-primary btn-sm">Mitglied bearbeiten</button>
   </li>
  </ul>
+
 </div>
 
 

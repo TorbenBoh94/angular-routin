@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Projekt} from './projekt';
-
+import{ProffessorenService} from '../professoren.professoren.service';
 
 @Injectable()
 export class ProjekteService {
@@ -8,15 +8,13 @@ index:number;
 edit:boolean;
   projekte=[
     new Projekt("Software","Dies ist eine Beschreibung","Kai Petersen","Wirtschaftsinformatik")
-   
   ]
+
   post={
     name:"",
     beschreibung:"",
-    beteiligte: "", 
+    beteiligte: [], 
     bereich:""
-
- 
   }
 
   constructor() { }
@@ -27,7 +25,7 @@ edit:boolean;
   this.post={
     name:"",
     beschreibung:"",
-    beteiligte: "", 
+    beteiligte: [], 
     bereich:""
 
  
@@ -57,7 +55,7 @@ edit:boolean;
     this.post={
     name:"",
     beschreibung:"",
-    beteiligte: "", 
+    beteiligte: [], 
     bereich:""
 
  
