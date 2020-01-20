@@ -22,7 +22,7 @@ edit:boolean;
   constructor() { }
    onAddworker(){
      this.projekte.push(
-       new Projekt(this.post.name,this.post.beschreibung,this.post.beteiligte)
+       new Projekt(this.post.name,this.post.beschreibung,this.post.beteiligte,this.post.bereich)
      )
   this.post={
     name:"",
@@ -44,18 +44,24 @@ edit:boolean;
     this.post.name=this.projekte[index].name;
     this.post.beschreibung=this.projekte[index].beschreibung;
     this.post.beteiligte=this.projekte[index].beteiligte;
-
+    this.post.bereich=this.projekte[this.index].bereich;
     this.index=index;
    }
    onEditProject(){
     this.projekte[this.index].name=this.post.name;
     this.projekte[this.index].beschreibung=this.post.beschreibung;
     this.projekte[this.index].beteiligte=this.post.beteiligte;
+    this.projekte[this.index].bereich=this.post.bereich;
    
     this.edit=false;
-    this.post.name="";
-    this.post.beschreibung="";
-    this.post.beteiligte="";
+    this.post={
+    name:"",
+    beschreibung:"",
+    beteiligte: "", 
+    bereich:""
+
+ 
+  }
 
    }
 

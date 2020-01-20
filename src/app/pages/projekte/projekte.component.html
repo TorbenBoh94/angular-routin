@@ -41,6 +41,9 @@
     <li class="list-group-item-action list-group-item">
       <input type="text" [(ngModel)]="projekteService.post.beteiligte" placeholder="Beteiligte Institutsmitglieder" >
     </li>
+        <li class="list-group-item-action list-group-item">
+      <input type="text" [(ngModel)]="projekteService.post.bereich" placeholder="Projektbereich" >
+    </li>
 
   <li class="list-group-item-action list-group-item">
     <button *ngIf="!projekteService.edit" (click)="onAddProject()" class="btn btn-primary btn-sm">Projekt hinzufügen</button>
