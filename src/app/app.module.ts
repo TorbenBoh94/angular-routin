@@ -22,6 +22,8 @@ import {NotFoundComponent} from './pages/notfound/notfound.component';
 import { LoginService } from './pages/login/login.service';
 import { ProfessorenService } from './pages/professoren/professoren.service';
 import { ForschungService } from './pages/forschung/forschung.service';
+import { EventsComponent } from './pages/events/events.component';
+import { NeuigkeitenComponent } from './pages/neuigkeiten/neuigkeiten.component';
 
 
 
@@ -60,6 +62,8 @@ import { ForschungService } from './pages/forschung/forschung.service';
                   DatenschutzComponent,
                   RechteComponent,
                   NotFoundComponent,
+                  EventsComponent,
+                  NeuigkeitenComponent,
                    ],
   bootstrap:    [ AppComponent ],
   providers: [LoginService, ProfessorenService, ForschungService]
