@@ -44,7 +44,7 @@ edit:boolean;
     this.post.name=this.projekte[index].name;
     this.post.beschreibung=this.projekte[index].beschreibung;
     this.post.beteiligte=this.projekte[index].beteiligte;
-    this.post.bereich=this.projekte[this.index].bereich;
+    this.post.bereich=this.projekte[index].bereich;
     this.index=index;
    }
    onEditProject(){
