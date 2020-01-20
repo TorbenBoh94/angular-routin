@@ -5,12 +5,12 @@ import {ProjekteService} from './projekte.service';
   selector:'my-projekte',
   templateUrl:'./projekte.component.html'
   
-  
 })
 
 export class ProjekteComponent{
   login:boolean;
   projekte=[];
+  
 
 
   constructor(private loginService:LoginService,

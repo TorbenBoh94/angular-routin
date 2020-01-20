@@ -7,7 +7,14 @@ export class ProjekteService {
 index:number;
 edit:boolean;
   projekte=[
-    new Projekt("Software","Dies ist eine Beschreibung","Kai Petersen","Wirtschaftsinformatik")
+    new Projekt("Grundlagen der Software-Entwicklung (451500)",
+                "Sie verstehen den grundlegenden Ansatz der Objektorientierten Programmierung und können einfach Klassen mit Methoden, Datenfeldern und Eigenschaften in Form von Klassen- und Instanzmembern entwickeln und nutzen. Sie sind in der Lage, algorithmierbare Aufgabenstellungen in einzelne Teilaufgaben zu modularisieren und mittels graphischer Repräsentation darzustellen. Darüber hinaus können Sie daraus Code in der Programmiersprache C# entwickeln, testen und aus den entwickelten Modulen ein lauffähiges Programm erzeugen, welches die Aufgabenstellung löst. Auf Konsolenebene können Sie Dialoge zur Ein- und Ausgabe programmieren. ",
+                "Kai Petersen",
+                "Wirtschaftsinformatik"),
+    new Projekt("Rechnerarchitektur und Betriebssysteme (451510)",
+                "Sie verfügen über Kenntnisse der Grundlagen des Rechneraufbaus und können die Komponenten beurteilen. Sie verfügen über die Fähigkeiten zur Bewertung unterschiedlicher Rechnerarchitekturen. Sie kennen die Basiskomponenten von Betriebssystemen sowie wichtige Grundkonzepte, Verfahren und Algorithmen moderner Betriebssysteme.",
+                "Sönke Cordts",
+                "Wirschaftsinformatik")
   ]
 
   post={

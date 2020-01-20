@@ -3,22 +3,22 @@
       
       <ul>
         <li *ngFor="let projekt of projekte;let i=index" class="list-group-item-action list-group-item"  >
-          <table width=100%>
+          <table width=100% >
         <tr>
-          <td>Name:</td>
+          <td valign=top>Name:</td>
           <th>{{projekt.name}}</th>
        
         </tr>
         <tr>
-          <td>Beschreibung:</td>
+          <td valign=top>Beschreibung:</td>
           <td>{{projekt.beschreibung}}</td>
         </tr>
         <tr>
-          <td>Beteiligte:</td>
+          <td valign=top>Beteiligte:</td>
           <td>{{projekt.beteiligte}}</td>
         </tr>
                 <tr>
-          <td>Fachbereich:</td>
+          <td valign=top>Fachbereich:</td>
           <td>{{projekt.bereich}}</td>
         </tr>
        </table>
