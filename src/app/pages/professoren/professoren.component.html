@@ -5,20 +5,20 @@
         <li *ngFor="let professor of professoren;let i=index" class="list-group-item-action list-group-item"  >
           <table width=100%>
         <tr>
-          <td>Name:</td>
+          <td valign=top>Name:</td>
           <th>{{professor.name}}, {{professor.vorname}}</th>
           <td rowspan=5><img src={{professor.img}} height=120 align=right></td>
         </tr>
         <tr>
-          <td>Bereich:</td>
+          <td valign=top>Bereich:</td>
           <td>{{professor.bereich}}</td>
         </tr>
         <tr>
-          <td>E-Mail:</td>
+          <td valign=top>E-Mail:</td>
           <td>{{professor.vorname}}.{{professor.name}}@hs-flensburg.de</td>
         </tr>
         <tr>
-          <td>Raum:</td>
+          <td valign=top>Raum:</td>
           <td>{{professor.raum}}</td>
         </tr>
       </table>

@@ -41,6 +41,8 @@ import { ProjekteService } from './pages/projekte/projekte.service';
                     {path:'forschung',component:ForschungComponent},
                     {path:'datenschutz',component:DatenschutzComponent},
                     {path:'rechte',component:RechteComponent},
+                    {path:'events',component:EventsComponent},
+                    {path:'neuigkeiten',component:NeuigkeitenComponent},
 
 
                     //Dieser Pfad muss letzter Pfad bleiben
