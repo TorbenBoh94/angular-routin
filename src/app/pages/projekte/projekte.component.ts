@@ -13,17 +13,24 @@ export class ProjekteComponent{
   login:boolean;
   projekte=[];
   professoren=[];
-
+  mitglieder:[];
 
   constructor(private loginService:LoginService,
   private projekteService:ProjekteService,
   private professorenService:ProfessorenService)
   {this.login=this.loginService.output(),
   this.projekte=this.projekteService.output(),
-  this.professoren=this.professorenService.output()}
+  this.professoren=this.professorenService.output()
+  }
 
   onEditProject(){
     this.projekteService.onEditProject();
+}
+onAddMitglied(optin:[]){
+  this.projekteService.onAddMitglied(optin);
+}
+ondeletebeteiligt(index:number){
+  this.projekteService.ondeletebeteiligt(index);
 }
 }
 

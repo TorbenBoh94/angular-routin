@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import {Projekt} from './projekt';
 import{ProffessorenService} from '../professoren.professoren.service';
+import{Beteiligt} from './beteiligt'
 
 @Injectable()
 export class ProjekteService {
 index:number;
 edit:boolean;
+beteiligter:string;
   projekte=[
     new Projekt("Grundlagen der Software-Entwicklung (451500)",
                 "Sie verstehen den grundlegenden Ansatz der Objektorientierten Programmierung und können einfach Klassen mit Methoden, Datenfeldern und Eigenschaften in Form von Klassen- und Instanzmembern entwickeln und nutzen. Sie sind in der Lage, algorithmierbare Aufgabenstellungen in einzelne Teilaufgaben zu modularisieren und mittels graphischer Repräsentation darzustellen. Darüber hinaus können Sie daraus Code in der Programmiersprache C# entwickeln, testen und aus den entwickelten Modulen ein lauffähiges Programm erzeugen, welches die Aufgabenstellung löst. Auf Konsolenebene können Sie Dialoge zur Ein- und Ausgabe programmieren. ",
@@ -64,11 +66,17 @@ edit:boolean;
     beschreibung:"",
     beteiligte: [], 
     bereich:""
-
- 
+    }
   }
-
-   }
-
+  onAddMitglied(option:[])
+  {
+     this.post.beteiligte.push
+     (
+       option
+     )  
+  }
+  ondeletebeteiligt(index:number){
+this.post.beteiligte.splice(index,1)
+  }
 }
 

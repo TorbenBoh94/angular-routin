@@ -28,27 +28,44 @@
     
 
  
- <ul *ngIf="login">
-  <li class="list-group-item-action list-group-item">
+ <ul *ngIf="!login">
+  <li class=" list-group-item">
     <h3>Neues Mitglied Hinzufügen</h3>   
   </li>
-   <li class="list-group-item-action list-group-item">
+   <li class=" list-group-item">
       <input type="text" [(ngModel)]="projekteService.post.name" placeholder="Name">
     </li>
-    <li class="list-group-item-action list-group-item">
+    <li class=" list-group-item">
       <input type="text" [(ngModel)]="projekteService.post.beschreibung" placeholder="Beschreibung" >
     </li>
-    <li class="list-group-item-action list-group-item">
-      <input type="text" [(ngModel)]="projekteService.post.beteiligte" placeholder="Beteiligte Institutsmitglieder" >
+
+    <!--Dropdown zur Auswahl von Institutsmitgliedern-->
+   <li class="list-group-item">
+      <button class="btn dropdown-toggle" data-toggle="dropdown" (click)="dropDownOpened= !dropDownOpened">
+Beteiligte Personen
+        <span></span>
+      </button>
+      <ul class="dropdown-menu" style="display:block;" *ngIf="dropDownOpened">
+        <!-- dropdown menu links -->
+        <li *ngFor="let option of professoren;let i=index" >
+         <button class="btn btn-primary btn-sm" (click)="onAddMitglied(option)"></button>
+          <label>{{option.vorname}} {{option.name}}</label>
+        </li>
+      </ul>
+      <ul>
+              <li class="list-group-item" style="display:inline" *ngFor="let beteiligt of projekteService.post.beteiligte;let i=index"><label>{{beteiligt.vorname}} {{beteiligt.name}}</label><button (click)="ondeletebeteiligt(i)">x</button></li>
+      </ul>
+      
     </li>
-        <li class="list-group-item-action list-group-item">
+    <li class=" list-group-item">
       <input type="text" [(ngModel)]="projekteService.post.bereich" placeholder="Projektbereich" >
     </li>
 
-  <li class="list-group-item-action list-group-item">
+  <li class=" list-group-item">
     <button *ngIf="!projekteService.edit" (click)="onAddProject()" class="btn btn-primary btn-sm">Projekt hinzufügen</button>
     <button *ngIf="projekteService.edit" (click)="onEditProject()" class="btn btn-primary btn-sm">Projekt bearbeiten</button>
   </li>
  </ul>
 </div>
+{{projekteService.post.beteiligte[0]}}
 
