@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { MultiSelectAllModule } from '@syncfusion/ej2-angular-dropdowns';
 
 import { AppComponent } from './app.component';
 
@@ -31,6 +32,7 @@ import { ProjekteService } from './pages/projekte/projekte.service';
 @NgModule({
   imports:      [ BrowserModule,
                   FormsModule,
+                  MultiSelectAllModule,
                   RouterModule.forRoot([
                     {path:'', component:LandingComponent},
                     {path:'login',component:LoginComponent},
