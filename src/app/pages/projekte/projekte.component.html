@@ -35,10 +35,12 @@
    <li class=" list-group-item">
       <input type="text" [(ngModel)]="projekteService.post.name" placeholder="Name">
     </li>
-    <li class=" list-group-item">
+    <li class="list-group-item">
       <input type="text" [(ngModel)]="projekteService.post.beschreibung" placeholder="Beschreibung" >
     </li>
-
+    <li class="list-group-item">
+              <label  style="display:inline" *ngFor="let beteiligt of projekteService.post.beteiligte;let i=index"><label>{{beteiligt.vorname}} {{beteiligt.name}}   </label><button class="btn btn-primary btn-xs" (click)="ondeletebeteiligt(i)">x</button></label>
+              </li>
     <!--Dropdown zur Auswahl von Institutsmitgliedern-->
    <li class="list-group-item">
       <button class="btn dropdown-toggle" data-toggle="dropdown" (click)="dropDownOpened= !dropDownOpened">
@@ -52,11 +54,12 @@ Beteiligte Personen
           <label>{{option.vorname}} {{option.name}}</label>
         </li>
       </ul>
-      <ul>
-              <li class="list-group-item" style="display:inline" *ngFor="let beteiligt of projekteService.post.beteiligte;let i=index"><label>{{beteiligt.vorname}} {{beteiligt.name}}</label><button (click)="ondeletebeteiligt(i)">x</button></li>
-      </ul>
+
       
     </li>
+         
+
+  
     <li class=" list-group-item">
       <input type="text" [(ngModel)]="projekteService.post.bereich" placeholder="Projektbereich" >
     </li>
@@ -67,5 +70,5 @@ Beteiligte Personen
   </li>
  </ul>
 </div>
-{{projekteService.post.beteiligte[0]}}
+
 

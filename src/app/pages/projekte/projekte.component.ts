@@ -26,8 +26,8 @@ export class ProjekteComponent{
   onEditProject(){
     this.projekteService.onEditProject();
 }
-onAddMitglied(optin:[]){
-  this.projekteService.onAddMitglied(optin);
+onAddMitglied(option:[]){
+  this.projekteService.onAddMitglied(option);
 }
 ondeletebeteiligt(index:number){
   this.projekteService.ondeletebeteiligt(index);
