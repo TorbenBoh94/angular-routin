@@ -25,13 +25,17 @@ export class ProjekteComponent{
 
   onEditProject(){
     this.projekteService.onEditProject();
-}
-onAddMitglied(option:[]){
-  this.projekteService.onAddMitglied(option);
-}
-ondeletebeteiligt(index:number){
-  this.projekteService.ondeletebeteiligt(index);
-}
+  }
+  onAddMitglied(option:[]){
+    this.projekteService.onAddMitglied(option);
+  }
+  ondeletebeteiligt(index:number){
+    this.projekteService.ondeletebeteiligt(index);
+  }
+
+  onAddProject(){
+    this.projekteService.onAddProject();
+  }
 }
 
 

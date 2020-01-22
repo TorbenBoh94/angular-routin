@@ -3,19 +3,27 @@
       
       <ul>
         <li *ngFor="let projekt of projekte;let i=index" class="list-group-item-action list-group-item"  >
-          <table width=100% >
+          <table width=100%  >
         <tr>
-          <td valign=top>Name:</td>
+          <td valign=top width=100>Name:</td>
           <th>{{projekt.name}}</th>
        
         </tr>
         <tr>
           <td valign=top>Beschreibung:</td>
-          <td>{{projekt.beschreibung}}</td>
+          <td align=left>{{projekt.beschreibung}}</td>
         </tr>
         <tr>
           <td valign=top>Beteiligte:</td>
-          <td>{{projekt.beteiligte}}</td>
+          <td>
+           
+        
+              <label *ngFor="let beteiligt of projekt.beteiligte" style="list-style-type:none;" >
+                {{beteiligt.vorname}}{{beteiligt.name}}
+            </label>
+          
+              
+          </td>
         </tr>
                 <tr>
           <td valign=top>Fachbereich:</td>
@@ -24,11 +32,12 @@
        </table>
           <button *ngIf="login" class="btn btn-primary btn-sm" (click)="projekteService.onEdit(i)">Editieren</button> 
           <button *ngIf="login" class="btn btn-primary btn-sm" (click)="projekteService.onDelete(i)">Löschen</button>
+       
       </ul>
     
 
  
- <ul *ngIf="!login">
+ <ul *ngIf="login">
   <li class=" list-group-item">
     <h3>Neues Mitglied Hinzufügen</h3>   
   </li>
