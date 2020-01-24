@@ -18,8 +18,8 @@
           <td>
            
         
-              <label *ngFor="let beteiligt of projekt.beteiligte" style="list-style-type:none;" >
-                {{beteiligt.vorname}}{{beteiligt.name}}
+              <label *ngFor="let beteiligt of projekt.beteiligte" style="list-style-type:none;">
+                {{beteiligt.vorname}} {{beteiligt.name}}
             </label>
           
               
@@ -45,7 +45,7 @@
       <input type="text" [(ngModel)]="projekteService.post.name" placeholder="Name">
     </li>
     <li class="list-group-item">
-      <input type="text" [(ngModel)]="projekteService.post.beschreibung" placeholder="Beschreibung" >
+      <textarea type="text" [(ngModel)]="projekteService.post.beschreibung" placeholder="Beschreibung" ></textarea>
     </li>
     <li class="list-group-item">
               <label  style="display:inline" *ngFor="let beteiligt of projekteService.post.beteiligte;let i=index"><label>{{beteiligt.vorname}} {{beteiligt.name}}   </label><button class="btn btn-primary btn-xs" (click)="ondeletebeteiligt(i)">x</button></label>
