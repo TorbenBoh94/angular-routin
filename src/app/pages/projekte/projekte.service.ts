@@ -80,7 +80,7 @@ beteiligter:string;
        option
        
      )  
-     console.log(this.professoren[0])
+    
   }
   ondeletebeteiligt(index:number){
 this.post.beteiligte.splice(index,1)
