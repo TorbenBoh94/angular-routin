@@ -2,6 +2,7 @@ import{Component} from '@angular/core';
 
 import{LoginService }from '../login/login.service';
 import {ProfessorenService} from '../professoren/professoren.service';
+import {NeuigkeitenService} from '../neuigkeiten/neuigkeiten.service';
 
 
 @Component({
@@ -12,15 +13,16 @@ import {ProfessorenService} from '../professoren/professoren.service';
 })
 
 export class LandingComponent{
-  professor=[
-
-  ]
+  professor=[];
+  neuigkeiten=[];
   
   login:boolean;
   constructor(private loginService:LoginService,
-  private professorenService:ProfessorenService)
+  private professorenService:ProfessorenService,
+  private neuigkeitenService:NeuigkeitenService)
   {this.login=this.loginService.output()
-    this.professor=this.professorenService.output()}
+    this.professor=this.professorenService.output()
+    this.neuigkeiten=this.neuigkeitenService.output()}
 
 
 }
