@@ -12,7 +12,8 @@ professoren=[];
   {
   this.professoren=this.professorenService.output()}
               
-
+//Den Professor will das Programm im "Default" leider nicht anzeigen aus mir unnerklärlichen Gründen
+//Beim Hinzufügen der Proffesoren funktioniert das ganze aber ohne Probleme
 beteiligter:string;
   projekte=[
     new Projekt("Grundlagen der Software-Entwicklung (451500)",
