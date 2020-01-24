@@ -1,8 +1,8 @@
 import{Component} from '@angular/core';
-import {Praesident} from './praesident';
+
 import{LoginService }from '../login/login.service';
 import {ProfessorenService} from '../professoren/professoren.service';
-import {Prof} from '../professoren/professoren.service';
+
 
 @Component({
   selector:'my-landing',

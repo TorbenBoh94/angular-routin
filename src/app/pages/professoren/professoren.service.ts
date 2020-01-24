@@ -9,7 +9,6 @@ edit:boolean;
     new Prof("https://hs-flensburg.de/sites/default/files/styles/portraitfoto/public/2019-05/Christoph_Jansen_ausschnitt.jpg.jpeg?itok=4-ImiMP8","Christoph","Jansen","Präsidium:Präsident","H 032"),
     new Prof("https://hs-flensburg.de/sites/default/files/styles/portraitfoto/public/2017-10/looks_volker.jpg.jpeg?itok=-sBtOfvb","Volker","Looks","Professor am Fachbereich Wirtschaft","C 026",),
     new Prof("https://hs-flensburg.de/sites/default/files/styles/portraitfoto/public/2017-11/petersen_kai.jpg.jpeg?itok=JVf1P7aR","Kai","Petersen","Professor am Fachbereich Wirtschaft","C 206"),
-   
   ]
   post={
     img:"",

@@ -1,15 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+import {NeuigkeitenService} from './neuigkeiten.service';
+import{LoginService }from '../login/login.service';
+
+
 
 @Component({
   selector: 'app-neuigkeiten',
-  templateUrl: './neuigkeiten.component.html',
-  styleUrls: ['./neuigkeiten.component.css']
+  templateUrl: './neuigkeiten.component.html'
+
 })
-export class NeuigkeitenComponent implements OnInit {
+export class NeuigkeitenComponent {
+news=[]
 
-  constructor() { }
+  constructor(private loginService:LoginService,
+              private neuigkeitenService:NeuigkeitenService) {
+                this.news=this.neuigkeitenService.output()
+               }
 
-  ngOnInit() {
-  }
+
 
 }

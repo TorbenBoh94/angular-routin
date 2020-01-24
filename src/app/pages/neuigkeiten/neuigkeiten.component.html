@@ -1,1 +1,33 @@
+
+<!--Als Reflink die ersten 5 News auf die erste Seite bringen
+<a href="">
 Neuigkeiten
+
+</a>-->
+
+
+<div class="container">
+    <h2 align=center>News</h2>
+      
+      <ul>
+        <li *ngFor="let neuigkeit of news;let i=index" class="list-group-item-action list-group-item"  >
+          <table width=100%  >
+        <tr>
+          <td valign=top width=110>Name:</td>
+          <th valign=top>{{neuigkeit.name}}</th>
+          <td rowspan=3><img src={{neuigkeit.img}} height=100 align=right></td>
+       
+        </tr>
+        <tr>
+          <td valign=top>Beschreibung:</td>
+          <td align=left valign=top>{{neuigkeit.beschreibung}}</td>
+        </tr>
+        <tr>
+          <td valign=bottom>{{neuigkeit.date| date:'dd.MM.yyyy'}}</td>
+        </tr>
+       </table>
+          <button *ngIf="login" class="btn btn-primary btn-sm" (click)="projekteService.onEdit(i)">Editieren</button> 
+          <button *ngIf="login" class="btn btn-primary btn-sm" (click)="projekteService.onDelete(i)">Löschen</button>
+       
+      </ul>
+</div>
