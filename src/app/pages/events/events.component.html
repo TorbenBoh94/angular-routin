@@ -16,7 +16,7 @@
         </tr>
         <tr>
           <td></td>
-          <td valign=bottom>{{event.date|date:'dd.MM.yyyy'}} {{event.time}} Uhr</td>
+          <td valign=bottom>{{event.date|date:'dd.MM.yyyy'}} {{event.time}} </td>
           
         </tr>
        </table>
@@ -27,7 +27,7 @@
 
 
 
-       <ul *ngIf="!login">
+       <ul *ngIf="login">
   <li class=" list-group-item">
     <h3>Neue News Hinzufügen</h3>   
   </li>
