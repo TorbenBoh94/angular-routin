@@ -31,7 +31,7 @@
         </tr>
        </table>
           <button *ngIf="login" class="btn btn-primary btn-sm" (click)="projekteService.onEdit(i)">Editieren</button> 
-          <button *ngIf="login" class="btn btn-primary btn-sm" (click)="projekteService.onDelete(i)">Löschen</button>
+          <button *ngIf="login && !projekteService.edit" class="btn btn-primary btn-sm" (click)="projekteService.onDelete(i)">Löschen</button>
        
       </ul>
     

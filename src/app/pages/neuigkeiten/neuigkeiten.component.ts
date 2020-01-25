@@ -11,12 +11,18 @@ import{LoginService }from '../login/login.service';
 })
 export class NeuigkeitenComponent {
 news=[]
-
+login=false;
   constructor(private loginService:LoginService,
               private neuigkeitenService:NeuigkeitenService) {
-                this.news=this.neuigkeitenService.output()
+                this.news=this.neuigkeitenService.output(),
+                this.login=loginService.output()
                }
-
+  get sortData() {
+    return this.news.sort((a, b) => {
+      
+      return <any>new Date(b.date) - <any>new Date(a.date);
+    });
+  }
 
 
 }

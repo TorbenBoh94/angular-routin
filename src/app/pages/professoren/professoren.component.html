@@ -23,7 +23,7 @@
         </tr>
       </table>
           <button *ngIf="login" class="btn btn-primary btn-sm" (click)="professorenService.onEdit(i)">Editieren</button> 
-          <button *ngIf="login" class="btn btn-primary btn-sm" (click)="professorenService.onDelete(i)">Löschen</button>
+          <button *ngIf="login && !professorenService.edit" class="btn btn-primary btn-sm" (click)="professorenService.onDelete(i)">Löschen</button>
       </ul>
     
 
