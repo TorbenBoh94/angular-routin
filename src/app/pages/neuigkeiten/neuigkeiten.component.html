@@ -23,7 +23,7 @@ Neuigkeiten
           <td align=left valign=top>{{neuigkeit.beschreibung}}</td>
         </tr>
         <tr>
-          <td valign=bottom>{{neuigkeit.date}}</td>
+          <td valign=bottom>{{neuigkeit.date|date:'medium'}}</td>
         </tr>
        </table>
           <button *ngIf="login" class="btn btn-primary btn-sm" (click)="neuigkeitenService.onEdit(i)">Editieren</button> 
@@ -41,7 +41,7 @@ Neuigkeiten
       <input type="text" [(ngModel)]="neuigkeitenService.post.name" placeholder=Name>
     </li>
     <li class=" list-group-item">
-      <input type="text" [(ngModel)]="neuigkeitenService.post.beschreibung" placeholder=Beschreibung >
+      <textarea type="text" [(ngModel)]="neuigkeitenService.post.beschreibung" placeholder=Beschreibung ></textarea>
     </li>
     <li class=" list-group-item">
       <input type="text" [(ngModel)]="neuigkeitenService.post.img" placeholder="Link zum Bild" >

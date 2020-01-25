@@ -28,7 +28,8 @@ post={
    }
 
   onAddnews(){
-    
+    this.currentDate= new Date();
+    this.post.date=this.currentDate;
     this.news.push(
       new Neuigkeiten(this.post.name,this.post.beschreibung,this.post.img,this.post.date)
     )
