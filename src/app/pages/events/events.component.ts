@@ -11,7 +11,8 @@ import {EventService} from './event.service'
 
 })
 export class EventsComponent {
-events=[]
+events=[];
+currentDate:Date=new Date();
 login=false;
   constructor(private loginService:LoginService,
               private eventservice:EventService) {

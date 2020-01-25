@@ -35,4 +35,7 @@ export class EventService {
       time:""
     }
   }
+  onDelete(index:number){
+    this.events.splice(index,1)
+  }
 }
