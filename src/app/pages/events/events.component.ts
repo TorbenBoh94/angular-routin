@@ -20,11 +20,5 @@ login=false;
                 this.login=loginService.output()
                }
 
-//Sortierung um immer das nächste Event an erster Stelle zu haben
-  get sortData() {
-    return this.events.sort((a, b) => {
-      
-      return <any>new Date(a.date) - <any>new Date(b.date);
-    });
-  }
+
 }

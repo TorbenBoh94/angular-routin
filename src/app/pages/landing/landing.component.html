@@ -37,8 +37,19 @@
           <th colspan="2" align=center>News</th>
         </tr>
         <tr>
-          <td>
-            
+          <td align=center>
+            <ul>
+              <li *ngFor="let neuigkeit of neuigkeitenService.sortData;let i=index" class="list-group-item-action list-group-item"  >
+                <table width=100%>
+                  <tr>
+                    <td  width=50 align=center>Name:</td>
+                    <th valign=top width=100 align=center>{{neuigkeit.name}}</th>
+                    <td align=center>{{neuigkeit.date|date:'dd.MM.yyyy'}}</td>
+                
+                  </tr>
+                </table>
+
+            </ul>
           </td>
         </tr>
           

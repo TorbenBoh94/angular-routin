@@ -17,12 +17,8 @@ login=false;
                 this.news=this.neuigkeitenService.output(),
                 this.login=loginService.output()
                }
-  get sortData() {
-    return this.news.sort((a, b) => {
-      
-      return <any>new Date(b.date) - <any>new Date(a.date);
-    });
-  }
+
+
 
 
 }
