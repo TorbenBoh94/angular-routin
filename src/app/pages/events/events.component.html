@@ -1,2 +1,54 @@
+<div class="container">
+    <h2 align=center>Events</h2>
+      
+      <ul>
+        <li *ngFor="let event of sortData;let i=index" class="list-group-item-action list-group-item"  >
+          <table width=100%  >
+        <tr>
+          <td valign=top width=110>Name:</td>
+          <th valign=top>{{event.name}}</th>
+          <td rowspan=3><img src={{event.img}} height=100 align=right></td>
+       
+        </tr>
+        <tr>
+          <td valign=top>Beschreibung:</td>
+          <td align=left valign=top>{{event.beschreibung}}</td>
+        </tr>
+        <tr>
+          <td valign=bottom>{{event.date|date:'dd.MM.yyyy'}} {{event.time}}</td>
+          
+        </tr>
+       </table>
+          <button *ngIf="login" class="btn btn-primary btn-sm" (click)="eventservice.onEdit(i)">Editieren</button> 
+          <button *ngIf="login && !eventservice.edit" class="btn btn-primary btn-sm" (click)="eventservice.onDelete(i)">Löschen</button>
+       
+      </ul>
 
-events works!
+
+
+       <ul *ngIf="!login">
+  <li class=" list-group-item">
+    <h3>Neue News Hinzufügen</h3>   
+  </li>
+   <li class=" list-group-item">
+      <input type="text" [(ngModel)]="eventservice.post.name" placeholder=Name>
+    </li>
+    <li class=" list-group-item">
+      <textarea type="text" [(ngModel)]="eventservice.post.beschreibung" placeholder=Beschreibung ></textarea>
+    </li>
+    <li class=" list-group-item">
+      <input type="text" [(ngModel)]="eventservice.post.img" placeholder="Link zum Bild" >
+    </li>
+        <li class=" list-group-item">
+      <input type="date" [(ngModel)]="eventservice.post.date" placeholder="Link zum Bild" >
+    </li>
+            <li class=" list-group-item">
+      <input type="time" [(ngModel)]="eventservice.post.time" placeholder="Link zum Bild" >
+    </li>
+
+  <li class=" list-group-item">
+    <button type=submit *ngIf="!eventservice.edit" (click)="eventservice.onAddevent()" class="btn btn-primary btn-sm">News hinzufügen</button>
+    <button *ngIf="eventservice.edit" (click)="eventservice.onEditevent()" class="btn btn-primary btn-sm">News bearbeiten</button>
+  </li>
+ </ul>
+</div>
