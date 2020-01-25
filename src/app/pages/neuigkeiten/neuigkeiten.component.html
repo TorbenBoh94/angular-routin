@@ -23,7 +23,7 @@ Neuigkeiten
           <td align=left valign=top>{{neuigkeit.beschreibung}}</td>
         </tr>
         <tr>
-          <td valign=bottom>{{neuigkeit.date|date:'medium'}}</td>
+          <td valign=bottom>{{neuigkeit.date|date:'dd.MM.yyyy'}}</td>
         </tr>
        </table>
           <button *ngIf="login" class="btn btn-primary btn-sm" (click)="neuigkeitenService.onEdit(i)">Editieren</button> 
