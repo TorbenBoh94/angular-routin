@@ -44,7 +44,7 @@
           <td>
             <a class="nav-link"routerLink="/neuigkeiten">
             <ul>
-              <li *ngFor="let neuigkeit of neuigkeitenService.sortData" class="list-group-item-action list-group-item"  >
+              <li *ngFor="let neuigkeit of neuigkeitenService.sortData|slice:0:5;" class="list-group-item-action list-group-item"  >
                 <table width=100%>
                   <tr>
                     <th valign=top width=100% align=left>{{neuigkeit.name}}</th>
@@ -72,7 +72,7 @@
           <td>
             <a class="nav-link"routerLink="/events">
             <ul>
-              <li *ngFor="let event of eventService.sortData" class="list-group-item-action list-group-item">
+              <li *ngFor="let event of eventService.sortData|slice:0:5;" class="list-group-item-action list-group-item">
                   <table width=100%>
                     <th valign=top width=100% align=center>{{event.name}}</th>
                     <td align=center>{{event.date|date:'dd.MM.yyyy'}}</td>
