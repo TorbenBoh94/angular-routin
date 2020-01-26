@@ -4,7 +4,7 @@
     Die Hochschule Flensburg befindet sich mit der zweiten Flensburger Hochschule, der Europa-Universität Flensburg etwas südlich des Flensburger Stadtzentrums im Stadtteil Sandberg auf dem Campusgelände. Die Fachhochschule ist eine von neun öffentlichen Hochschulen in Schleswig-Holstein. Die Anzahl der Studierenden hat sich in den vergangen zehn Jahren nahezu verdoppelt- von zirka 2000 auf mehr als 4100.
   </p>
   <ul>
-    
+    <a class="nav-link"routerLink="/prof">
     <li class="list-group-item-action list-group-item">
                   <table width=100%>
         <tr>
@@ -26,46 +26,65 @@
         </tr>
       </table>
     </li>
+    </a>
   </ul>
 </div>
+<br>
+<!--News und Events-->
 <div class="container">
+<div class="row">
 
+
+<div class="col-xs-8 col-sm-6">
+<p align=center> <b>News</b></p>
   <table width=100%>
     <td>
-      <table align=center>
-        <tr>
-          <th colspan="2" align=center>News</th>
-        </tr>
-        <tr>
-          <td align=center>
-            <ul>
-              <li *ngFor="let neuigkeit of neuigkeitenService.sortData;let i=index" class="list-group-item-action list-group-item"  >
-                <table width=100%>
-                  <tr>
-                    <td  width=50 align=center>Name:</td>
-                    <th valign=top width=100 align=center>{{neuigkeit.name}}</th>
-                    <td align=center>{{neuigkeit.date|date:'dd.MM.yyyy'}}</td>
-                
-                  </tr>
-                </table>
-
-            </ul>
-          </td>
-        </tr>
-          
-          
-      </table>
-    </td>
-    <td>
-      <table align=center>
-        <th>Events</th>
+      <table align=center width=100%>
         <tr>
           <td>
-
+            <a class="nav-link"routerLink="/neuigkeiten">
+            <ul>
+              <li *ngFor="let neuigkeit of neuigkeitenService.sortData" class="list-group-item-action list-group-item"  >
+                <table width=100%>
+                  <tr>
+                    <th valign=top width=100% align=left>{{neuigkeit.name}}</th>
+                    <td align=center>{{neuigkeit.date|date:'dd.MM.yyyy'}}</td>
+                  </tr>
+                </table>
+            </ul>
+            </a>
           </td>
         </tr>
       </table>
     </td>
-
   </table>
+</div>
+
+
+
+<div class="col-xs-8 col-sm-6">
+   <p align=center> <b>Nächsten Events</b></p>
+   <table width=100%>
+    <td>
+      
+      <table align=center width=100%>
+        <tr>
+          <td>
+            <a class="nav-link"routerLink="/events">
+            <ul>
+              <li *ngFor="let event of eventService.sortData" class="list-group-item-action list-group-item">
+                  <table width=100%>
+                    <th valign=top width=100% align=center>{{event.name}}</th>
+                    <td align=center>{{event.date|date:'dd.MM.yyyy'}}</td>
+                  </table>
+              </li>
+            </ul>
+            </a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </table>
+</div>
+</div>
 </div>
