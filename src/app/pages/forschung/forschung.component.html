@@ -79,10 +79,6 @@
       <input  type="text" [(ngModel)]="forschungService.post.school" placeholder=Lehranstalt >
     </li>
 
-    <li *ngIf="forschungService.post.publikationsTyp!='Publikations Typ'" class="list-group-item-action list-group-item">
-      <input type="file" accept="application/pdf">
-    </li>
-
   <li *ngIf="!forschungService.edit" class="list-group-item-action list-group-item">
     <button  (click)="onAddPublication()" class="btn btn-primary btn-sm">Publikation hinzufügen</button>
   </li>
