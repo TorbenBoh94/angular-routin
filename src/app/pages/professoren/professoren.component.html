@@ -29,25 +29,25 @@
 
 
  <ul *ngIf="login">
-  <li class="list-group-item-action list-group-item">
+  <li class=" list-group-item">
     <h3>Neues Mitglied Hinzufügen</h3>   
   </li>
-   <li class="list-group-item-action list-group-item">
+   <li class=" list-group-item">
       <input type="text" [(ngModel)]="professorenService.post.name" placeholder=Name>
     </li>
-    <li class="list-group-item-action list-group-item">
+    <li class=" list-group-item">
       <input type="text" [(ngModel)]="professorenService.post.vorname" placeholder=Vorname >
     </li>
-    <li class="list-group-item-action list-group-item">
+    <li class=" list-group-item">
       <input type="text" [(ngModel)]="professorenService.post.img" placeholder="Link zum Bild" >
     </li>
-    <li class="list-group-item-action list-group-item">
+    <li class=" list-group-item">
       <input type="text" [(ngModel)]="professorenService.post.bereich" placeholder=Bereich >
     </li>
-    <li class="list-group-item-action list-group-item">
+    <li class=" list-group-item">
       <input type="text" [(ngModel)]="professorenService.post.raum" placeholder=Raum >
     </li>
-  <li class="list-group-item-action list-group-item">
+  <li class=" list-group-item">
     <button type=submit *ngIf="!professorenService.edit" (click)="onAddworker()" class="btn btn-primary btn-sm">Mitglied hinzufügen</button>
     <button *ngIf="professorenService.edit" (click)="onEditworker()" class="btn btn-primary btn-sm">Mitglied bearbeiten</button>
   </li>

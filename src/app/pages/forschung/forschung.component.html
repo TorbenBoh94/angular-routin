@@ -36,12 +36,12 @@
 
 <!-- Input neuer Publikationen -->
  <ul *ngIf="login">
-  <li class="list-group-item-action list-group-item">
+  <li class=" list-group-item">
     <h3>Neue Publikation hinzufügen</h3>   
   </li>
 
   <!-- Dropdown Menu -->
-   <li class="list-group-item-action list-group-item">
+   <li class=" list-group-item">
       <button class="btn dropdown-toggle" data-toggle="dropdown" (click)="dropDownOpened= !dropDownOpened">
       {{this.forschungService.post.publikationsTyp}}
         <span class="caret"></span>
@@ -55,34 +55,34 @@
         </li>
       </ul>
     </li>
-    <li  *ngIf="forschungService.post.publikationsTyp!='Publikations Typ'"class="list-group-item-action list-group-item">
+    <li  *ngIf="forschungService.post.publikationsTyp!='Publikations Typ'"class=" list-group-item">
       <input type="text" [(ngModel)]="forschungService.post.forschungsprojekt" placeholder="Publikationsname" >
     </li>
 
-    <li *ngIf="forschungService.post.publikationsTyp!='Publikations Typ'" class="list-group-item-action list-group-item">
+    <li *ngIf="forschungService.post.publikationsTyp!='Publikations Typ'" class=" list-group-item">
       <input type="text" [(ngModel)]="forschungService.post.autor" placeholder=Autor >
     </li>
 
-    <li *ngIf="forschungService.post.publikationsTyp=='Magazin'||forschungService.post.publikationsTyp=='Masterthesis'||forschungService.post.publikationsTyp=='Buch'" class="list-group-item-action list-group-item">
+    <li *ngIf="forschungService.post.publikationsTyp=='Magazin'||forschungService.post.publikationsTyp=='Masterthesis'||forschungService.post.publikationsTyp=='Buch'" class=" list-group-item">
       <input  type="month" [(ngModel)]="forschungService.post.jahr">
     </li>
 
-    <li *ngIf="forschungService.post.publikationsTyp=='Buch'" class="list-group-item-action list-group-item">
+    <li *ngIf="forschungService.post.publikationsTyp=='Buch'" class=" list-group-item">
       <input type="text" [(ngModel)]="forschungService.post.volumen" placeholder=Umfang >
     </li>
 
-    <li *ngIf="forschungService.post.publikationsTyp!='Publikations Typ'" class="list-group-item-action list-group-item">
+    <li *ngIf="forschungService.post.publikationsTyp!='Publikations Typ'" class=" list-group-item">
       <input type="text" [(ngModel)]="forschungService.post.publisher" placeholder=Publisher >
     </li>
 
-    <li *ngIf="forschungService.post.publikationsTyp=='Magazin'||forschungService.post.publikationsTyp=='Masterthesis'" class="list-group-item-action list-group-item">
+    <li *ngIf="forschungService.post.publikationsTyp=='Magazin'||forschungService.post.publikationsTyp=='Masterthesis'" class=" list-group-item">
       <input  type="text" [(ngModel)]="forschungService.post.school" placeholder=Lehranstalt >
     </li>
 
-  <li *ngIf="!forschungService.edit" class="list-group-item-action list-group-item">
+  <li *ngIf="!forschungService.edit" class=" list-group-item">
     <button  (click)="onAddPublication()" class="btn btn-primary btn-sm">Publikation hinzufügen</button>
   </li>
-  <li *ngIf="forschungService.edit" class="list-group-item-action list-group-item">
+  <li *ngIf="forschungService.edit" class=" list-group-item">
     <button  (click)="onEditPublication()" class="btn btn-primary btn-sm">Publikation bearbeiten</button>
   </li>
  </ul>
